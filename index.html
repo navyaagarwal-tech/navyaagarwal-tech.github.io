@@ -1,7 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 <body>
-<h1>Navya Agarwal</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="container">
+    <header class="hero">
+      <h1>Your Name</h1>
+      <p>Short tagline or “Software Engineer • Designer • Writer” etc.</p>
+    </header>
+
+    <nav class="links">
+      <ul>
+        <li><a href="https://twitter.com/yourhandle" target="_blank">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+        <li><a href="https://yourblog.com" target="_blank">Blog</a></li>
+      </ul>
+    </nav>
+
+    <footer>
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Set the current year in the footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
