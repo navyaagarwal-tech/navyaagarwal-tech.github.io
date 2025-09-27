@@ -1,41 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navya Agarwal | Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navya Agarwal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+    <div class="container">
+        <header class="header">
+            <h1 class="name">Navya Agarwal</h1>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#talks" class="nav-link">Talks</a></li>
+                    <li><a href="#authorship" class="nav-link">Authorship</a></li>
+                    <li><a href="#judgment" class="nav-link">Judgment</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- Hero -->
-    <header class="hero">
-      <div class="headshot">
-        <img src="headshot-placeholder.jpg" alt="Navya Agarwal Headshot">
-      </div>
-      <div class="intro">
-        <h1>Navya Agarwal</h1>
-        <p>Software Engineer & Speaker</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/navya-agarwal/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/navyaagarwal-tech" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </header>
+        <main class="main-content">
+            <section id="about" class="section">
+                <h2>About</h2>
+                <p class="intro">
+                    I am a technology professional at Adobe Inc with extraordinary ability in my field. This portfolio showcases 
+                    my accomplishments in speaking engagements, published works, and expert judgment activities that demonstrate 
+                    sustained national and international recognition for my contributions to the technology industry.
+                </p>
+            </section>
 
-    <main>
 
-      <!-- Talks -->
-      <section id="talks">
-        <h2>Talks</h2>
-        <div class="talk-year">
-          <h3>2025</h3>
-          <ul>
-            <li><a href="#">Talk Title 1 — Conference</a></li>
-            <li><a href="#">Talk Title 2 — Conference</a></li>
-          </ul>
-        </div>
-        <div class="talk-year">
-          <h3>2024</h3>
-          <ul>
+            <section id="talks" class="section">
+                <h2>Talks</h2>
+                <div class="content-list">
+                    <div class="talk-item">
+                        <div class="talk-date">2024</div>
+                        <div class="talk-details">
+                            <h3>Add Your Conference Talk Title</h3>
+                            <p>Conference Name • Location</p>
+                        </div>
+                    </div>
+                    <div class="talk-item">
+                        <div class="talk-date">2023</div>
+                        <div class="talk-details">
+                            <h3>Add Another Speaking Engagement</h3>
+                            <p>Event Name • Location</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; color: #666; font-style: italic;">
+                    Speaking engagements at conferences, industry events, and professional forums demonstrating 
+                    recognition and expertise in the field of technology.
+                </p>
+            </section>
+
+            <section id="authorship" class="section">
+                <h2>Authorship</h2>
+                <div class="content-grid">
+                    <div class="content-item">
+                        <h3>Add Your Publication Title</h3>
+                        <p>Description of your published work, research paper, or article in professional publications.</p>
+                        <a href="#" class="content-link">View publication →</a>
+                    </div>
+                    <div class="content-item">
+                        <h3>Add Another Publication</h3>
+                        <p>Description of another published work or contribution to industry literature.</p>
+                        <a href="#" class="content-link">View publication →</a>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; color: #666; font-style: italic;">
+                    Published works, articles, and contributions to professional publications demonstrating 
+                    original contributions and expertise in the field.
+                </p>
+            </section>
+
+            <section id="judgment" class="section">
+                <h2>Judgment</h2>
+                <div class="content-grid">
+                    <div class="content-item">
+                        <h3>Add Your Judging Activity</h3>
+                        <p>Description of your role as a judge, reviewer, or evaluator for competitions, panels, or professional activities.</p>
+                        <a href="#" class="content-link">Learn more →</a>
+                    </div>
+                    <div class="content-item">
+                        <h3>Add Another Judging Role</h3>
+                        <p>Description of another judging or evaluation role demonstrating recognition as an expert.</p>
+                        <a href="#" class="content-link">Learn more →</a>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; color: #666; font-style: italic;">
+                    Activities serving as a judge, reviewer, or evaluator in professional competitions, 
+                    panels, or other recognition activities demonstrating expertise and standing in the field.
+                </p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Navya Agarwal. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/navya-agarwal/" target="_blank">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active state to navigation based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
