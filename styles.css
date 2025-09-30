@@ -150,3 +150,38 @@ footer a:hover {
         font-size: 1rem;
     }
 }
+
+.judgment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.judgment-table th, .judgment-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.judgment-table th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+}
+
+.judgment-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.judgment-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.judgment-table a {
+    color: #0077b5;
+    text-decoration: none;
+}
+
+.judgment-table a:hover {
+    text-decoration: underline;
+}
+
